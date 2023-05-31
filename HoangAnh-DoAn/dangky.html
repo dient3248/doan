@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MECURY Sneaker SecondHand</title>
+    <link rel="stylesheet" type="text/css" href="\index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/bootstrap.min.css" rel="stylesheet">
+    <link href="/font-awesome.min.css" rel="stylesheet">
+    <link href="/prettyPhoto.css" rel="stylesheet">
+    <link href="/price-range.css" rel="stylesheet">
+    <link href="/animate.css" rel="stylesheet">
+    <link href="/product.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+    <link href="/responsive.css" rel="stylesheet">
+    <link href="/test_slide_product.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function createlg() {
+            $.post("http://localhost:3004/createlogin", {
+                TenKH: $("#TenKH").val(),
+                UserLogin: $("#UserLogin").val(),
+                Password: $("#Password").val(),
+                Address: $("#DiaChi").val(),
+                Phonenumber: $("#SDT").val(),
+                IdAdmin: $("#IdAdmin").val()
+            }, function(data, status) {
+                if (!data || data.length == 0) {
+                    alert("Đăng nhập thành công");
+                }
+                // if (data[i].UserLogin != UserLogin || data[i].SDT != Phonenumber) {
+                //   alert("cap nhat thanh cong");
+                // }
+
+                //  else  if(data[0].IdAdmin == 1 && data[0].IdAdmin == 0 ){
+                //     window.location.href="/dangnhap";
+                //   }
+            })
+        }
+    </script>
+</head>
+<style>
+    .logo1 {
+        margin-top: 30px;
+        margin-left: 350px;
+    }
+    
+    .login1 {
+        margin-right: -575px
+    }
+    
+    .textype {
+        background-color: beige;
+        margin-bottom: 15px;
+        border-radius: 20px;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <a id="banner"><img src="img/logo2hand.jpg" style="width:30%"></a>
+        <div class="header-right">
+            <!-- <li><a href="./dangnhap.html">Đăng nhập</a></li> -->
+            <div class="box">
+                <div class="container-1">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="tìm kiếm" id="search" placeholder="Search..." />
+                </div>
+            </div>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="http://localhost:3004/index" Tile="Trang chủ" class="active">Trang chủ </a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="ban.html">Bán</a></li>
+                <li><a href="tintuc.html">Tin Tức</a></li>
+                <li><a href="lienhe.html">Liên Hệ</a></li>
+                <li><a href="http://localhost:3004/dangnhap">Đăng nhập</a></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <img src="img/logo2hand.jpg" class="logo1" width="250" height="250" align="left">
+
+        <div class="login1">
+            <div class="login-form">
+                <!-- <form action="" method="post"> -->
+                <h3 style="color: orange" align="center"><b>Tạo tài khoản Giày 2hand</b></h3>
+                <div class="input-box">
+                    <div class="divcl">
+                        <tr>
+                            <td><span class="emailcl">UserName:</span> </td>
+                            <td><input class="textype" type="text" placeholder="Nhập họ và tên " id="TenKH"></td>
+                        </tr>
+                    </div>
+
+                    <div class="divcl">
+                        <tr>
+                            <td><span class="emailcl">UserLogin:</span> </td>
+                            <td><input class="textype" type="text" id="UserLogin" placeholder="Nhập tên đăng nhập"></td>
+                        </tr>
+                    </div>
+
+                    <div class="divcl">
+                        <tr>
+                            <td><span class="emailcl">Password:</span> </td>
+                            <td><input class="textype" type="password" placeholder="Nhập mật khẩu" id="Password"></td>
+                        </tr>
+                    </div>
+
+                    <div class="divcl3">
+                        <tr>
+                            <td><span class="emailcl">Idadmin:</span> </td>
+                            <td><input class="textype" type="password" id="IdAdmin" placeholder="Nhập pass cho nhân viên, nhập 0 cho khách hàng"></td>
+                        </tr>
+                    </div>
+
+                    <div class="divcl1">
+                        <tr>
+                            <td><span class="email1">Address:</span></td>
+                            <td><input class="textype" id="DiaChi" placeholder="Nhập địa chỉ" type="text"></td>
+                        </tr>
+                    </div>
+
+                    <div class="divcl2">
+                        <tr>
+                            <td><span class="email2">Phone number:	</span></td>
+                            <td><input class="textype" type="password" placeholder="Nhập số điện thoại" id="SDT"></td>
+
+                        </tr>
+                        </br> <button style="margin-top: 20px; width: 150px; height: 40px; cursor: pointer; font-size: 15px; font-weight: bold; margin-left: 90px; background-color: orange; color: #fff;" onclick="createlg()"> Đăng ký</button>
+
+                    </div>
+                    <!-- </form> -->
+                </div>
+            </div>
+
+
+            <div id="footer" style="width: 1470px;">
+                <p>
+
+                    Địa chỉ: 145 Lê Lư - Phú Thọ Hòa - Tân Phú - TP Hồ Chí Minh </br>
+                    Email: phamhoanganh5603@gmail.com </br>
+                    Số điện thoại: 0898638123 </br>
+                    Facebook: <a href="https://www.facebook.com/hoanganh3203/"> Hoang Anh</a></br>
+                </p>
+            </div>
+    </main>
+</body>
+
+</html>
